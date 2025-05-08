@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chèn Hình Ảnh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Phần bên trái: Chèn hình -->
+        <div class="left-section">
+            <h1>Tạo Thẻ Bài</h1>
+            <div class="image-container">
+                <img src="bg.png" alt="Hình nền" class="background-image">
+                <div class="name-container">
+                    <input type="text" id="card-name" placeholder="Nhập tên thẻ" maxlength="20">
+                    <input type="color" id="name-color" value="#4b2502" title="Chọn màu chữ">
+                </div>
+                <img id="overlay-image" class="overlay-image" style="display: none;">
+                <div class="stats-container" style="background-color: #ffffff;">
+                    <div class="stat-box">
+                        <span class="stat-label">ATK</span>
+                        <input type="number" id="atk-value" min="0" max="9999" value="0" placeholder="ATK">
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">DEF</span>
+                        <input type="number" id="def-value" min="0" max="9999" value="0" placeholder="DEF">
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <input type="file" id="image-upload" accept="image/*">
+                <button id="upload-btn">Tải lên</button>
+                <button id="download-btn" disabled>Tải xuống hình ghép</button>
+            </div>
+        </div>
+        
+        <!-- Phần bên phải: Xem trước -->
+        <div class="right-section">
+            <h1>Xem Trước</h1>
+            <div id="preview-container">
+                <div class="preview-box">
+                    <img id="merged-image" alt="Hình ghép">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
